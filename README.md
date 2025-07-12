@@ -73,3 +73,84 @@ Type your question in the chat box
 Responses stream in real-time
 
 Use "Clear Conversation" to reset chat
+
+4.Install New Models:
+
+Type model name in "Install New Models" section
+
+Click "Install Model" button
+
+Popular options: mistral, phi3, gemma
+
+Troubleshooting
+Ollama not detected:
+
+Ensure Ollama is running in background
+
+Check with ollama list in terminal
+
+Restart computer after installation
+
+Slow first response:
+
+Models load into memory on first use
+
+Subsequent responses are faster
+
+Try smaller models like phi3 or gemma
+
+Out of memory errors:
+
+Close other applications
+
+Use smaller models
+
+Reduce max response length
+
+Add more RAM if possible
+
+Model installation issues:
+
+Check internet connection
+
+Verify model name is correct
+
+Ensure sufficient disk space (models are 2-5GB each)
+
+Performance Tips
+Start with smaller models like phi3 or gemma if you have limited RAM
+
+Close memory-intensive applications before using larger models
+
+Use shorter responses by reducing max length
+
+Be patient on first run - models need to load into memory
+
+Consider hardware upgrades if using larger models frequently
+
+Development
+Requirements
+Python 3.8+
+
+Streamlit
+
+Ollama Python package
+
+File Structure
+text
+local-ai-assistant/
+├── app.py              # Main application code
+├── requirements.txt    # Python dependencies
+└── README.md           # This documentation
+Running Tests
+bash
+# No formal tests yet - manual testing via UI
+License
+This project is licensed under the MIT License 
+
+Acknowledgments
+Ollama for the local model infrastructure
+
+Streamlit for the web app framework
+
+Meta, Mistral AI, Microsoft, and Google for the open-source models
