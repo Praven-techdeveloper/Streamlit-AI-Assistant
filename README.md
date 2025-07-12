@@ -44,3 +44,11 @@ pip install streamlit ollama
 Run the App
 bash
 streamlit run app.py
+
+
+Recommended Models
+Model	Parameters	Best For	RAM Needed	Speed
+llama3	8B	General purpose	8GB+	⚡⚡⚡
+mistral	7B	Reasoning tasks	8GB+	⚡⚡
+phi3	3.8B	Fast responses	4GB+	⚡⚡⚡⚡
+gemma	2B	Basic tasks	4GB+	⚡⚡⚡⚡⚡
