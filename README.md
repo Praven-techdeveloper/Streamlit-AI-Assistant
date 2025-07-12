@@ -39,3 +39,8 @@ ollama-env\Scripts\activate    # Windows
 
 # Install dependencies
 pip install streamlit ollama
+
+
+Run the App
+bash
+streamlit run app.py
