@@ -20,3 +20,12 @@ Streaming Responses: Real-time token streaming
 Offline Capable: Works without internet after setup
 
 Cross-Platform: Runs on Windows, macOS, and Linux
+
+
+Quick Start
+Prerequisites
+Python 3.8+
+
+Ollama installed
+
+4GB+ RAM (8GB+ recommended for larger models)
