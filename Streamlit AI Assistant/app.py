@@ -3,14 +3,11 @@ import ollama
 import time
 import subprocess
 
-# Set page config
 st.set_page_config(
     page_title="Enhanced AI Assistant",
     page_icon="🤖",
     layout="wide"
 )
-
-# Initialize session state
 if 'generated' not in st.session_state:
     st.session_state.generated = []
     
@@ -28,11 +25,9 @@ def get_installed_models():
     except:
         return st.session_state.available_models
 
-# Sidebar configuration
+ 
 with st.sidebar:
     st.title("⚙️ Local AI Configuration")
-    
-    # Get available models
     available_models = get_installed_models()
     
     # Model selection
@@ -61,7 +56,7 @@ with st.sidebar:
                     text=True
                 )
                 
-                # Stream output
+                 
                 output_container = st.empty()
                 while True:
                     output = process.stdout.readline()
@@ -71,7 +66,7 @@ with st.sidebar:
                         output_container.write(output.strip())
                 
                 st.success(f"Model {new_model} installed successfully!")
-                # Refresh model list
+                 
                 st.session_state.available_models = get_installed_models()
                 st.experimental_rerun()
             except Exception as e:
@@ -84,17 +79,17 @@ with st.sidebar:
     st.caption("⚠️ First response may be slow as models load into memory")
 
 # Main app interface
-st.title("🤖 Local AI Assistant")
-st.subheader("100% Free, Private & Offline - Powered by Ollama")
+st.title("🤖 Enhanced AI Assistant")
+st.subheader("100% Free, Private & Offline")
 
 # Display model info
-current_model = selected_model.split(":")[0]  # Remove version tag if exists
+current_model = selected_model.split(":")[0]   
 st.info(f"**Current Model:** `{current_model}` | **Creativity:** {temperature} | **Max Length:** {max_length}")
 
 # Function for generating responses
 def generate_response(prompt):
     try:
-        # Start the response stream
+        
         response = ollama.chat(
             model=selected_model,
             messages=[{'role': 'user', 'content': prompt}],
@@ -105,7 +100,7 @@ def generate_response(prompt):
             }
         )
         
-        # Stream response
+        
         full_response = []
         for chunk in response:
             if chunk['message']['content']:
@@ -185,7 +180,7 @@ model_data = [
     {"Model": "gemma", "Parameters": "2B", "Best For": "Basic tasks", "RAM": "4GB+", "Speed": "⚡⚡⚡⚡⚡"},
 ]
 
-# Display as columns
+ 
 cols = st.columns(len(model_data))
 for i, model in enumerate(model_data):
     with cols[i]:
