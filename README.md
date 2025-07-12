@@ -52,3 +52,9 @@ llama3	8B	General purpose	8GB+	⚡⚡⚡
 mistral	7B	Reasoning tasks	8GB+	⚡⚡
 phi3	3.8B	Fast responses	4GB+	⚡⚡⚡⚡
 gemma	2B	Basic tasks	4GB+	⚡⚡⚡⚡⚡
+Usage Guide
+Install Models:
+
+Use the sidebar to install models like llama3
+
+Or via terminal: ollama pull llama3
