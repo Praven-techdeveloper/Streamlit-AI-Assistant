@@ -53,8 +53,23 @@ mistral	7B	Reasoning tasks	8GB+	⚡⚡
 phi3	3.8B	Fast responses	4GB+	⚡⚡⚡⚡
 gemma	2B	Basic tasks	4GB+	⚡⚡⚡⚡⚡
 Usage Guide
-Install Models:
+1.Install Models:
 
 Use the sidebar to install models like llama3
 
 Or via terminal: ollama pull llama3
+
+
+2.Select Model:
+
+Choose from installed models in the dropdown
+
+Adjust temperature (creativity) and max length
+
+3.Start Chatting:
+
+Type your question in the chat box
+
+Responses stream in real-time
+
+Use "Clear Conversation" to reset chat
