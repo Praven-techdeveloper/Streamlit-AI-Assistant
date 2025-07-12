@@ -29,3 +29,13 @@ Python 3.8+
 Ollama installed
 
 4GB+ RAM (8GB+ recommended for larger models)
+
+Installation
+bash
+# Create virtual environment (recommended)
+python -m venv ollama-env
+source ollama-env/bin/activate  # Linux/Mac
+ollama-env\Scripts\activate    # Windows
+
+# Install dependencies
+pip install streamlit ollama
